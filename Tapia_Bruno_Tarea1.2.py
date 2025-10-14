@@ -1,3 +1,4 @@
+# %%
 # -*- coding: utf-8 -*-
 """Untitled0.ipynb
 
@@ -11,3 +12,5 @@ Original file is located at
 for i in range(1,11):
   #Se imprime la serie de unos con el truco indicado.
   print(i*"1")
+# %%
+# Nota: 7.0
