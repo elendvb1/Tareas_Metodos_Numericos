@@ -54,3 +54,5 @@ Cuando el metodo de Newton llega a un error cercano a la máxima precisión de
 cifras significativas que alcanza float64 (Error minimo en el gráfico entonces
 el error deja de disminuir.
 """
+
+# Nota: 7.0
