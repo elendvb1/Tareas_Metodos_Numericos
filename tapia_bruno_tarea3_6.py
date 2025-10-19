@@ -30,3 +30,4 @@ plt.grid(True)
 plt.show()
 """ Es posible usar Poisson cuando el número de pixeles es muy grande (r>>1)"""
 
+# Nota: 7.0
