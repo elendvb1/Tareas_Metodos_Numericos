@@ -22,6 +22,7 @@ b = np.array([1, 1])
 # Media y covarianza transformadas
 mu_y = A @ mu_x + b
 Sigma_y = A @ Sigma_x @ A.T
+# Falta deducir estas fórmulas
 
 print("Media de Y:\n", mu_y)
 print("Covarianza de Y:\n", Sigma_y)
@@ -62,3 +63,5 @@ plt.ylabel('x2')
 plt.legend()
 plt.axis('equal')
 plt.show()
+
+# Nota: 6.5
