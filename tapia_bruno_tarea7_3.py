@@ -51,3 +51,5 @@ print("• No se puede lograr una precisión de 1e-7 porque el ruido aleatorio")
 print("  tiene una desviación estándar de 1e-5, lo que impone un límite físico.")
 print("• El método de Simpson es de orden 4, pero en presencia de ruido")
 print("  el error total deja de decrecer más allá del nivel del ruido.")
+
+# Nota 7.0
