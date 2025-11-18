@@ -205,3 +205,7 @@ plt.title('Comparación métodos con control de error')
 plt.legend()
 plt.grid(True, which="both", ls="--", lw=0.5)
 plt.show()
+
+
+# Nota: 6.5
+# Faltó concluir y analizar
