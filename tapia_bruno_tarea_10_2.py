@@ -1,3 +1,5 @@
+# %%
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -65,3 +67,5 @@ plt.title("Comparación solución RK4 vs exacta")
 plt.legend()
 plt.grid(True)
 plt.show()
+
+# Nota: 7.0
