@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[margin=2.5cm]{geometry}
+
+\begin{document}
+
+\title{Tarea 5.2}
+\author{Bruno Tapia}
+\date{}
+\maketitle
+
+\section*{Enunciado}
+
+Considere una variable aleatoria $x$ que puede tomar valores enteros con probabilidades $p_i$. Suponga que a priori conocemos sólo la varianza de $x$ y que su media es cero. Calcule la distribución de probabilidad de basándose en el principio de máxima entropía.
+
+\section*{Solución}
+
+Queremos maximizar la entropía de Shannon
+\[
+H = -\sum_{i=-\infty}^{\infty} p_i \ln p_i
+\]
+sujeta a las restricciones:
+\[
+\sum_i p_i = 1,\qquad
+\sum_i i\, p_i = 0,\qquad
+\sum_i i^2 \, p_i = \sigma^2.
+\]
+
+Formamos el funcional de Lagrange introduciendo multiplicadores $\alpha,\beta,\gamma$:
+\[
+\mathcal{L} = -\sum_i p_i\ln p_i
+-\alpha\left(\sum_i p_i - 1\right)
+-\beta\left(\sum_i i p_i\right)
+-\gamma\left(\sum_i i^2 p_i - \sigma^2\right).
+\]
+Derivamos con respecto a $p_i$ e igualamos a cero:
+\[
+\frac{\partial\mathcal{L}}{\partial p_i}
+= -(\ln p_i + 1) - \alpha - \beta i - \gamma i^2 = 0.
+\]
+
+Despejando:
+\[
+\ln p_i = -1 - \alpha - \beta i - \gamma i^2,
+\]
+\[
+p_i = A\, e^{-\beta i - \gamma i^2},
+\]
+donde $A = e^{-1-\alpha}$ es una constante de normalización.
+
+Como la media es cero y la restricción es simétrica, concluimos que $\beta = 0$. Por tanto:
+\[
+p_i = A\, e^{-\lambda i^2}, \qquad \lambda = \gamma \ge 0.
+\]
+
+La normalización exige:
+\[
+A^{-1} = Z(\lambda) = \sum_{i=-\infty}^{\infty} e^{-\lambda i^2}.
+\]
+
+La varianza debe satisfacer:
+\[
+\sigma^2 = \sum_{i=-\infty}^{\infty} i^2 p_i =
+\frac{1}{Z(\lambda)}\sum_{i=-\infty}^{\infty} i^2 e^{-\lambda i^2}.
+\]
+
+Esta ecuación determina $\lambda$ de manera única y debe resolverse numéricamente.
+Así, la distribución de máxima entropía bajo las restricciones dadas es la \textbf{gaussiana discreta}:
+\[
+\boxed{
+p_i = \frac{1}{Z(\lambda)} e^{-\lambda i^2}
+}
+\]
+donde $\lambda$ depende de la varianza.
+
+
+\end{document}
